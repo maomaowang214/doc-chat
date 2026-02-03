@@ -1,0 +1,54 @@
+@use './var';
+
+/* 全局滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(from var(--el-text-color-primary) r g b / 30%);
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(from var(--el-text-color-primary) r g b / 50%);
+  }
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+.mainl-white {
+  width: 100%;
+  min-height: calc(100vh - var(--el-header-height) - var(--el-footer-height));
+  background-color: white;
+}
+
+.main-full {
+  width: 100%;
+  height: calc(100vh - var(--el-header-height) - var(--el-footer-height) - var(--app-content-padding) * 2);
+}
+
+.main-full-white {
+  width: 100%;
+  height: calc(100vh - var(--el-header-height) - var(--el-footer-height) - var(--app-content-padding) * 2);
+  background-color: white;
+}
+
+// 卡片
+.card {
+  padding: 20px;
+  overflow-x: hidden;
+  background-color: #202123;
+  border: 1px solid #444654;
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgb(0 0 0 / 5%);
+}
+
+.pagination-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}

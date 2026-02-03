@@ -52,3 +52,5 @@ git push -u origin main
 ```
 
 `.gitignore` 已配置为忽略 `node_modules`、`dist`、`__pycache__`、大文件等，**不会**忽略 `vue-doc-qa-chat` 和 `py-server` 的源码。
+
+**若 GitHub 上看不到 vue-doc-qa-chat 的源码**（目录为空或只有一条子模块记录），多半是 vue-doc-qa-chat 内有自己的 `.git`。请按 **[GIT_SYNC.md](./GIT_SYNC.md)** 里的步骤操作：先删除 `vue-doc-qa-chat/.git`，再在仓库根目录执行 `git add .` 和 `git push`。

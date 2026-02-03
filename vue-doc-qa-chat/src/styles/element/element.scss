@@ -1,0 +1,205 @@
+// el-table 表格样式
+.el-table {
+  flex: 1;
+  background-color: #202123; // 表格容器背景色
+  --el-table-bg-color: #202123; // Element Plus 表格背景色变量
+  --el-table-tr-bg-color: #202123; // Element Plus 行背景色变量
+  --el-table-header-bg-color: #202123; // Element Plus 表头背景色变量
+  --el-table-text-color: #fff; // Element Plus 表格文字色变量
+  --el-table-header-text-color: #fff; // Element Plus 表头文字色变量
+  --el-table-row-hover-bg-color: rgba(255, 255, 255, 0.08); // Element Plus 行悬停背景色变量
+  --el-table-border-color: #444654; // Element Plus 表格边框色变量
+  color: #fff; // 表格默认文字色
+  border: 1px solid #444654; // 表格边框
+
+  // 修复 safari 浏览器表格错位 https://github.com/HalseySpicy/Geeker-Admin/issues/83
+  table {
+    width: 100%;
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .el-table__header th {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #202123 !important; // 表头背景色
+    color: #fff !important; // 表头文字色
+    border-bottom-color: #444654; // 表头底部边框色
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .el-table__row {
+    font-size: 14px;
+    background-color: #202123; // 行背景色
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.08); // 行悬停背景色
+    }
+    
+    // 单元格文字颜色
+    td {
+      color: #fff !important;
+    }
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .el-table__body tr.el-table__row--striped td {
+    background-color: rgba(255, 255, 255, 0.02); // 斑马行背景色
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .el-table__body td {
+    border-bottom-color: #444654; // 单元格底部边框色
+    color: #fff; // 单元格文字颜色
+  }
+  
+  // 单元格内容样式
+  /* stylelint-disable-next-line selector-class-pattern */
+  .el-table__cell {
+    color: #fff;
+    
+    .cell {
+      color: #fff;
+    }
+  }
+
+  // 设置 el-table 中 header 文字不换行，并省略
+  /* stylelint-disable-next-line selector-class-pattern */
+  .el-table__header .el-table__cell > .cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  // 解决表格数据为空时样式不居中问题(仅在element-plus中)
+  /* stylelint-disable-next-line selector-class-pattern */
+  .el-table__empty-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #9ca3af; // 空表格文字色
+
+    .table-empty {
+      line-height: 30px;
+    }
+  }
+
+  // table 中 image 图片样式
+  .table-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+// el-dialog 自定义弹窗样式
+.el-dialog {
+  --el-dialog-bg-color: #202123; // 对话框背景色
+  &__title {
+    color: #fff; // 对话框标题文字色
+  }
+  &__body {
+    padding: 0 !important;
+    background-color: #202123; // 对话框内容背景色
+    color: #fff; // 对话框文字色
+  }
+
+  &__footer {
+    border-top: 1px solid #444654;
+    background-color: #202123; // 对话框底部背景色
+  }
+
+  &__headerbtn {
+    top: 0;
+    color: #fff; // 对话框关闭按钮色
+
+    &:hover {
+      color: #10a37f; // 对话框关闭按钮悬停色
+    }
+  }
+}
+
+.el-button--primary.is-plain,
+.el-button--primary.is-text,
+.el-button--primary.is-link {
+  --el-button-text-color: #fff; // 设置链接按钮文字颜色为ChatGPT主题绿色
+}
+
+// el-input 自定义输入框样式
+.el-input {
+  --el-input-bg-color: #343541; // 输入框背景色
+  --el-input-border-color: #444654; // 输入框边框色
+  --el-input-text-color: #fff; // 输入框文字色
+  --el-input-placeholder-color: #9ca3af; // 输入框占位符颜色
+
+  // 禁用状态样式
+  &.is-disabled .el-input__inner {
+    background-color: rgba(52, 53, 65, 0.6);
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+// 带图标的输入框样式
+.el-input-group {
+  &__append,
+  &__prepend {
+    background-color: #202123;
+    border-color: #444654;
+    color: #fff;
+  }
+}
+
+// el-tag 标签样式（深色主题）
+.el-tag {
+  --el-tag-bg-color: rgba(16, 163, 127, 0.2);
+  --el-tag-border-color: rgba(16, 163, 127, 0.4);
+  --el-tag-text-color: #10a37f;
+}
+
+// el-link 链接样式（深色主题）
+.el-link {
+  --el-link-text-color: #10a37f;
+  
+  &:hover {
+    color: #1abc9c;
+  }
+}
+
+// el-form 表单样式（深色主题）
+.el-form-item__label {
+  color: #fff;
+}
+
+// el-pagination 分页样式（深色主题）
+.el-pagination {
+  --el-pagination-bg-color: #202123;
+  --el-pagination-text-color: #fff;
+  --el-pagination-button-bg-color: #343541;
+  --el-pagination-button-color: #fff;
+  --el-pagination-hover-color: #10a37f;
+  
+  .el-pager li {
+    background-color: #343541;
+    color: #fff;
+    
+    &:hover {
+      color: #10a37f;
+    }
+    
+    &.is-active {
+      background-color: #10a37f;
+      color: #fff;
+    }
+  }
+  
+  .btn-prev,
+  .btn-next {
+    background-color: #343541;
+    color: #fff;
+  }
+  
+  .el-pagination__total,
+  .el-pagination__jump {
+    color: #fff;
+  }
+}

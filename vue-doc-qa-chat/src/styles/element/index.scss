@@ -1,0 +1,36 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #343541 // ChatGPT风格的绿色作为主色调
+    )
+  ),
+  $header: (
+    'height': 60px
+  ),
+  $footer: (
+    'height': 30px
+  ),
+  $table: (
+    'header-bg-color': #444654,
+    // 表格头部背景色
+    'header-text-color': #e5e5e5,
+    // 表格头部文字色
+    'border-color': #444654,
+    // 表格边框色
+    'row-hover-bg-color': rgba(255, 255, 255, 0.05),
+    // 行悬停背景色
+    'row-stripe-bg-color': rgba(255, 255, 255, 0.02) // 斑马行背景色
+  ),
+  $table-padding: (
+    'large': 16px 0,
+    'default': 12px 0,
+    'small': 4px 0
+  ),
+  $scrollbar: (
+    'bg-color': rgba(255, 255, 255, 0.3),
+    'hover-bg-color': rgba(255, 255, 255, 0.5)
+  )
+);
+
+// 自定义覆盖 elementplus 组件样式，补充上面所没有的样式定义
+@use './element.scss' as *;
