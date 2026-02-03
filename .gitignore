@@ -1,0 +1,52 @@
+# OS
+.DS_Store
+*.local
+
+# IDE
+.idea
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv
+.venv
+env
+*.db
+
+# Node
+node_modules
+dist
+dist-ssr
+coverage
+*.tsbuildinfo
+**/.eslintcache
+pnpm-debug.log*
+npm-debug.log*
+
+# 后端：向量库与大数据文件（保留目录结构用 .gitkeep）
+py-server/vector_store/*.sqlite3
+py-server/vector_store/**/*
+!py-server/vector_store/.gitkeep
+!py-server/vector_store/**/.gitkeep
+py-server/fileStorage/*.json
+py-server/app/document_qa.db
+
+# 前端环境与日志
+vue-doc-qa-chat/logs
+vue-doc-qa-chat/*.log
+.env
+.env.local
+.env.*.local
+
+# Cursor / 本地
+.cursor
